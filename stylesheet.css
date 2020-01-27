@@ -1,0 +1,253 @@
+ *
+{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body{
+	background-color: #f2f2f2;
+	background-size: cover;
+	font-family: sans-serif;
+	background-attachment: fixed;
+	background-position: center;
+	text-align: center;
+}
+
+.logopic{
+	width: 50px;
+	height: 40px;
+}
+header{
+	position: absolute;
+	top:0;
+	left: 0;
+	padding: 0 80px;
+	background: #262626; 
+	width: 100%;
+	box-sizing: border-box;
+}
+
+header .logo{
+	color: white;
+	height: 60px;
+	line-height: 60px;
+	font-size: 18px;
+	float: left;
+	font-weight: bold;
+}
+
+header nav{
+	float: right;
+
+}
+
+header nav ul{
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+header nav ul li{
+	list-style: none;
+	position: relative;
+}
+
+header nav ul li.sub-menu:before{
+	content: '\f0d7';
+	font-family: fontAwesome;
+	position: absolute;
+	line-height: 50px;
+	color: #fff;
+	right: 5px;
+}
+header nav ul li.active.sub-menu:before{
+	content: '\f0d8';
+}
+
+header nav ul li ul{
+	position: absolute;
+	left: 0;
+	background: #333;
+	display: none;
+}
+
+header nav ul li.active ul{
+	display: block;
+}
+
+header nav ul li ul li{
+	display: block;
+	width: 130px;
+	font-size: 14px;
+}
+
+header nav ul li a{
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+	color: #fff;
+	text-decoration: none;
+	display: block;
+}
+
+.active, header nav ul li a:hover{
+	background-color: #2196f3;
+	color: #fff;
+}
+
+.menu-toggle{
+	color: #fff;
+	float: right;
+	line-height: 50px;
+	font-size: 24px;
+	cursor: pointer;
+	display: none;
+
+}
+
+@media (max-width: 991px){
+
+	header{
+		padding: 0 20px;
+	}
+	.menu-toggle{
+		display: block;
+	}
+	header nav{
+		/*display: none;*/
+		position: absolute;
+		width: 100%;
+		height: calc(90vh - 50px);
+		background: #333;
+		top: 50px;
+		left: -100%;
+		transition: 0.5s;
+	}
+	header nav.active{
+		left: 0;
+	}
+	header nav ul{
+		display: block;
+		text-align: center;
+	}
+
+	header nav ul li a{
+		border-bottom: 1px solid rgba(0,0,0.2)		
+	}
+	header nav ul li.active ul{
+	position: relative;
+	background: #003e6f;
+	}
+	header nav ul li ul li{
+		width: 100%;
+
+	}	
+}
+
+.decoration{
+ background-color: #ff9900;
+ height: 40px; 
+ width: 100%;
+}
+
+
+#demo img{
+	width: 100%;
+	height: auto;
+
+}
+
+.video1{
+	width: 100%;
+	height: 200px;
+	border: 2px solid black;
+}
+
+.donation-content{
+	margin-top: 20px;
+	border-left: 2px solid black; 
+	border-right: 2px solid black; 
+	width: 100%;
+}
+
+#donate-form{ 
+	margin-left: 200px;
+	margin-top: 100px;
+	float: none;
+	position: absolute;
+	width: 20%;
+}
+
+#donation-page{
+	background-color: red;
+}
+
+
+
+
+
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 5px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+
+#reg-now{
+	background-color: #ff9900;
+	width: 250px;
+	height: 35px;
+	padding: 5px;
+	float: right;
+	font-size: 16px;
+	color: black;
+	cursor: pointer;
+}
+
+
